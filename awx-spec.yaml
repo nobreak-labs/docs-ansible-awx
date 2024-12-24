@@ -1,0 +1,554 @@
+GROUP:      awx.ansible.com
+KIND:       AWX
+VERSION:    v1beta1
+
+FIELD: spec <Object>
+
+DESCRIPTION:
+    <empty>
+FIELDS:
+  additional_labels	<[]string>
+    Additional labels defined on the resource, which should be propagated to
+    child resources
+
+  admin_email	<string>
+    The admin user email
+
+  admin_password_secret	<string>
+    Secret where the admin password can be found
+
+  admin_user	<string>
+    Username to use for the admin account
+
+  affinity	<Object>
+    If specified, the pod's scheduling constraints
+
+  annotations	<string>
+    Common annotations for both Web and Task deployments.
+
+  api_urlpattern_prefix	<string>
+    An optional configuration to add a prefix in the API URL path
+
+  api_version	<string>
+    apiVersion of the deployment type
+
+  auto_upgrade	<boolean>
+    Should AWX instances be automatically upgraded when operator gets upgraded
+
+  broadcast_websocket_secret	<string>
+    Secret where the broadcast websocket secret can be found
+
+  bundle_cacert_secret	<string>
+    Secret where can be found the trusted Certificate Authority Bundle
+
+  ca_trust_bundle	<string>
+    Path where the trusted CA bundle is available
+
+  control_plane_ee_image	<string>
+    Registry path to the Execution Environment container image to use on control
+    plane pods
+
+  control_plane_priority_class	<string>
+    Assign a preexisting priority class to the control plane pods
+
+  create_preload_data	<boolean>
+    Whether or not to preload data upon instance creation
+
+  csrf_cookie_secure	<string>
+    Set csrf cookie secure mode for web
+
+  deployment_type	<string>
+    Name of the deployment type
+
+  development_mode	<boolean>
+    If the deployment should be done in development mode
+
+  ee_extra_env	<string>
+    <no description>
+
+  ee_extra_volume_mounts	<string>
+    Specify volume mounts to be added to Execution container
+
+  ee_images	<[]Object>
+    Registry path to the Execution Environment container to use
+
+  ee_pull_credentials_secret	<string>
+    Secret where pull credentials for registered ees can be found
+
+  ee_resource_requirements	<Object>
+    Resource requirements for the ee container
+
+  extra_settings	<[]Object>
+    Extra settings to specify for AWX
+
+  extra_settings_files	<Object>
+    Extra ConfigMaps or Secrets of settings files to specify for AWX
+
+  extra_volumes	<string>
+    Specify extra volumes to add to the application pod
+
+  garbage_collect_secrets	<boolean>
+    Whether or not to remove secrets upon instance removal
+
+  host_aliases	<[]Object>
+    HostAliases for app containers
+
+  hostname	<string>
+    (Deprecated) The hostname of the instance
+
+  image	<string>
+    Registry path to the application container to use
+
+  image_pull_policy	<string>
+  enum: Always, always, Never, never, ....
+    The image pull policy
+
+  image_pull_secret	<string>
+    (Deprecated) Image pull secret for app and database containers
+
+  image_pull_secrets	<[]string>
+    Image pull secrets for app and database containers
+
+  image_version	<string>
+    Application container image version to use
+
+  ingress_annotations	<string>
+    Annotations to add to the Ingress Controller
+
+  ingress_api_version	<string>
+    The Ingress API version to use
+
+  ingress_class_name	<string>
+    The name of ingress class to use instead of the cluster default.
+
+  ingress_controller	<string>
+    Special configuration for specific Ingress Controllers
+
+  ingress_hosts	<[]Object>
+    Ingress hostnames of the instance
+
+  ingress_path	<string>
+    The ingress path used to reach the deployed service
+
+  ingress_path_type	<string>
+    The ingress path type for the deployed service
+
+  ingress_tls_secret	<string>
+    (Deprecated) Secret where the Ingress TLS secret can be found
+
+  ingress_type	<string>
+  enum: none, Ingress, ingress, Route, ....
+    The ingress type to use to reach the deployed instance
+
+  init_container_extra_commands	<string>
+    Extra commands for the init container
+
+  init_container_extra_volume_mounts	<string>
+    Specify volume mounts to be added to the init container
+
+  init_container_image	<string>
+    Registry path to the init container to use
+
+  init_container_image_version	<string>
+    Init container image version to use
+
+  init_container_resource_requirements	<Object>
+    Resource requirements for the init container
+
+  init_projects_container_image	<string>
+    Registry path to the init projects container to use
+
+  ipv6_disabled	<boolean>
+    Disable web container's nginx ipv6 listener
+
+  kind	<string>
+    Kind of the deployment type
+
+  ldap_cacert_secret	<string>
+    Secret where can be found the LDAP trusted Certificate Authority Bundle
+
+  ldap_password_secret	<string>
+    Secret where can be found the LDAP bind password
+
+  loadbalancer_class	<string>
+    Class of LoadBalancer to use
+
+  loadbalancer_ip	<string>
+    Assign LoadBalancer IP address
+
+  loadbalancer_port	<integer>
+    Port to use for the loadbalancer
+
+  loadbalancer_protocol	<string>
+  enum: http, https
+    Protocol to use for the loadbalancer
+
+  metrics_utility_configmap	<string>
+    Metrics-Utility ConfigMap
+
+  metrics_utility_console_enabled	<boolean>
+    Enable metrics utility shipping to Red Hat Hybrid Cloud Console
+
+  metrics_utility_cronjob_gather_schedule	<string>
+    Metrics-Utility Gather Data CronJob Schedule
+
+  metrics_utility_cronjob_report_schedule	<string>
+    Metrics-Utility Report CronJob Schedule
+
+  metrics_utility_enabled	<boolean>
+    Enable metrics utility
+
+  metrics_utility_image	<string>
+    Metrics-Utility Image
+
+  metrics_utility_image_pull_policy	<string>
+    Metrics-Utility Image PullPolicy
+
+  metrics_utility_image_version	<string>
+    Metrics-Utility Image Version
+
+  metrics_utility_pvc_claim	<string>
+    Metrics-Utility PVC Claim
+
+  metrics_utility_pvc_claim_size	<string>
+    Metrics-Utility PVC Claim Size
+
+  metrics_utility_pvc_claim_storage_class	<string>
+    Metrics-Utility PVC Claim Storage Class
+
+  metrics_utility_secret	<string>
+    Metrics-Utility Secret
+
+  metrics_utility_ship_target	<string>
+    Metrics-Utility Ship Target
+
+  nginx_listen_queue_size	<integer>
+    Set the socket listen queue size for nginx (defaults to same as uwsgi)
+
+  nginx_worker_connections	<integer>
+    Set the number of connections per worker for nginx
+
+  nginx_worker_cpu_affinity	<string>
+    Set the CPU affinity for nginx workers
+
+  nginx_worker_processes	<integer>
+    Set the number of workers for nginx
+
+  no_log	<boolean>
+    Configure no_log for no_log tasks
+
+  node_selector	<string>
+    nodeSelector for the pods
+
+  nodeport_port	<integer>
+    Port to use for the nodeport
+
+  old_postgres_configuration_secret	<string>
+    Secret where the old database configuration can be found for data migration
+
+  postgres_configuration_secret	<string>
+    Secret where the database configuration can be found
+
+  postgres_data_volume_init	<boolean>
+    Sets permissions on the /var/lib/pgdata/data for postgres container using an
+    init container (not Openshift)
+
+  postgres_extra_args	<[]string>
+    <no description>
+
+  postgres_extra_volume_mounts	<string>
+    Specify volume mounts to be added to Postgres container
+
+  postgres_extra_volumes	<string>
+    Specify extra volumes to add to the application pod
+
+  postgres_image	<string>
+    Registry path to the PostgreSQL container to use
+
+  postgres_image_version	<string>
+    PostgreSQL container image version to use
+
+  postgres_init_container_commands	<string>
+    Customize the postgres init container commands (Non Openshift)
+
+  postgres_init_container_resource_requirements	<Object>
+    (Deprecated, use postgres_resource_requirements parameter) Resource
+    requirements for the postgres init container
+
+  postgres_keep_pvc_after_upgrade	<boolean>
+    Specify whether or not to keep the old PVC after PostgreSQL upgrades
+
+  postgres_keepalives	<boolean>
+    Controls whether client-side TCP keepalives are used for Postgres
+    connections.
+
+  postgres_keepalives_count	<integer>
+    Controls the number of TCP keepalives that can be lost before the client's
+    connection to the server is considered dead.
+
+  postgres_keepalives_idle	<integer>
+    Controls the number of seconds of inactivity after which TCP should send a
+    keepalive message to the server.
+
+  postgres_keepalives_interval	<integer>
+    Controls the number of seconds after which a TCP keepalive message that is
+    not acknowledged by the server should be retransmitted.
+
+  postgres_label_selector	<string>
+    Label selector used to identify postgres pod for data migration
+
+  postgres_priority_class	<string>
+    Assign a preexisting priority class to the postgres pod
+
+  postgres_resource_requirements	<Object>
+    Resource requirements for the PostgreSQL container
+
+  postgres_security_context_settings	<Object>
+    Key/values that will be set under the pod-level securityContext field
+
+  postgres_selector	<string>
+    nodeSelector for the Postgres pods
+
+  postgres_storage_class	<string>
+    Storage class to use for the PostgreSQL PVC
+
+  postgres_storage_requirements	<Object>
+    Storage requirements for the PostgreSQL container
+
+  postgres_tolerations	<string>
+    node tolerations for the Postgres pods
+
+  projects_existing_claim	<string>
+    PersistentVolumeClaim to mount /var/lib/projects directory
+
+  projects_persistence	<boolean>
+    Whether or not the /var/lib/projects directory will be persistent
+
+  projects_storage_access_mode	<string>
+    AccessMode for the /var/lib/projects PersistentVolumeClaim
+
+  projects_storage_class	<string>
+    Storage class for the /var/lib/projects PersistentVolumeClaim
+
+  projects_storage_size	<string>
+    Size for the /var/lib/projects PersistentVolumeClaim
+
+  projects_use_existing_claim	<string>
+  enum: _Yes_, _No_
+    Using existing PersistentVolumeClaim
+
+  receptor_log_level	<string>
+    Set log level of receptor service
+
+  redis_capabilities	<[]string>
+    Redis container capabilities
+
+  redis_image	<string>
+    Registry path to the redis container to use
+
+  redis_image_version	<string>
+    Redis container image version to use
+
+  redis_resource_requirements	<Object>
+    Resource requirements for the redis container
+
+  replicas	<integer>
+    Number of instance replicas
+
+  route_api_version	<string>
+    The route API version to use
+
+  route_host	<string>
+    The DNS to use to points to the instance
+
+  route_tls_secret	<string>
+    Secret where the TLS related credentials are stored
+
+  route_tls_termination_mechanism	<string>
+  enum: Edge, edge, Passthrough, passthrough
+    The secure TLS termination mechanism to use
+
+  rsyslog_args	<[]string>
+    <no description>
+
+  rsyslog_command	<[]string>
+    <no description>
+
+  rsyslog_extra_env	<string>
+    <no description>
+
+  rsyslog_extra_volume_mounts	<string>
+    Specify volume mounts to be added to the Rsyslog container
+
+  rsyslog_resource_requirements	<Object>
+    Resource requirements for the rsyslog container
+
+  secret_key_secret	<string>
+    Secret where the secret key can be found
+
+  security_context_settings	<Object>
+    Key/values that will be set under the pod-level securityContext field
+
+  service_account_annotations	<string>
+    ServiceAccount annotations
+
+  service_annotations	<string>
+    Annotations to add to the service
+
+  service_labels	<string>
+    Additional labels to apply to the service
+
+  service_type	<string>
+  enum: LoadBalancer, loadbalancer, ClusterIP, clusterip, ....
+    The service type to be used on the deployed instance
+
+  session_cookie_secure	<string>
+    Set session cookie secure mode for web
+
+  set_self_labels	<boolean>
+    Maintain some of the recommended `app.kubernetes.io/*` labels on the
+    resource (self)
+
+  task_affinity	<Object>
+    If specified, the pod's scheduling constraints
+
+  task_annotations	<string>
+    Task deployment annotations. This will override the general annotations
+    parameter for the Task deployment.
+
+  task_args	<[]string>
+    <no description>
+
+  task_command	<[]string>
+    <no description>
+
+  task_extra_env	<string>
+    <no description>
+
+  task_extra_volume_mounts	<string>
+    Specify volume mounts to be added to Task container
+
+  task_liveness_failure_threshold	<integer>
+    Number of consecutive failure events to identify failure of task pod
+
+  task_liveness_initial_delay	<integer>
+    Initial delay before starting liveness checks on task pod
+
+  task_liveness_period	<integer>
+    Time period in seconds between each liveness check for the task pod
+
+  task_liveness_timeout	<integer>
+    Number of seconds to wait for a probe response from task pod
+
+  task_manage_replicas	<boolean>
+    Enables operator control of replicas count for the task deployment when set
+    to 'true'
+
+  task_node_selector	<string>
+    nodeSelector for the task pods
+
+  task_privileged	<boolean>
+    If a privileged security context should be enabled
+
+  task_readiness_failure_threshold	<integer>
+    Number of consecutive failure events to identify failure of task pod
+
+  task_readiness_initial_delay	<integer>
+    Initial delay before starting readiness checks on task pod
+
+  task_readiness_period	<integer>
+    Time period in seconds between each readiness check for the task pod
+
+  task_readiness_timeout	<integer>
+    Number of seconds to wait for a probe response from task pod
+
+  task_replicas	<integer>
+    Number of task instance replicas
+
+  task_resource_requirements	<Object>
+    Resource requirements for the task container
+
+  task_tolerations	<string>
+    node tolerations for the task pods
+
+  task_topology_spread_constraints	<string>
+    topology rule(s) for the task pods
+
+  termination_grace_period_seconds	<integer>
+    Optional duration in seconds pods needs to terminate gracefully
+
+  tolerations	<string>
+    node tolerations for the pods
+
+  topology_spread_constraints	<string>
+    topology rule(s) for the pods
+
+  uwsgi_listen_queue_size	<integer>
+    Set the socket listen queue size for uwsgi
+
+  uwsgi_processes	<integer>
+    Set the number of uwsgi processes to run in a web container
+
+  web_affinity	<Object>
+    If specified, the pod's scheduling constraints
+
+  web_annotations	<string>
+    Web deployment annotations. This will override the general annotations
+    parameter for the Web deployment.
+
+  web_args	<[]string>
+    <no description>
+
+  web_command	<[]string>
+    <no description>
+
+  web_extra_env	<string>
+    <no description>
+
+  web_extra_volume_mounts	<string>
+    Specify volume mounts to be added to the Web container
+
+  web_liveness_failure_threshold	<integer>
+    Number of consecutive failure events to identify failure of web pod
+
+  web_liveness_initial_delay	<integer>
+    Initial delay before starting liveness checks on web pod
+
+  web_liveness_period	<integer>
+    Time period in seconds between each liveness check for the web pod
+
+  web_liveness_timeout	<integer>
+    Number of seconds to wait for a probe response from web pod
+
+  web_manage_replicas	<boolean>
+    Enables operator control of replicas count for the web deployment when set
+    to 'true'
+
+  web_node_selector	<string>
+    nodeSelector for the web pods
+
+  web_readiness_failure_threshold	<integer>
+    Number of consecutive failure events to identify failure of web pod
+
+  web_readiness_initial_delay	<integer>
+    Initial delay before starting readiness checks on web pod
+
+  web_readiness_period	<integer>
+    Time period in seconds between each readiness check for the web pod
+
+  web_readiness_timeout	<integer>
+    Number of seconds to wait for a probe response from web pod
+
+  web_replicas	<integer>
+    Number of web instance replicas
+
+  web_resource_requirements	<Object>
+    Resource requirements for the web container
+
+  web_tolerations	<string>
+    node tolerations for the web pods
+
+  web_topology_spread_constraints	<string>
+    topology rule(s) for the web pods
+
+
