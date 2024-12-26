@@ -1,0 +1,27 @@
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+spec:
+  # AWX Web UI
+  admin_user: admin
+  # admin_email: admin@example.com
+  # admin_password_secret: awx-admin-password
+
+  # Ingress
+  # ingress_type: Ingress #Default: none
+  # ingress_class_name: nginx
+  # ingress_hosts:
+  #  - hostname: awx.example.com
+  # ingress_path: /
+
+  # Service
+  service_type: LoadBalancer
+
+  # Replicas
+  replicas: 1
+  #web_replicas: 2
+  #task_replicas: 2
+  
+  # Database Storage
+  #postgres_storage_class: standard

@@ -1,4 +1,4 @@
-# 1 awx web resource
+#. 1 AWX 웹 리소스
 
 ![](images/awx_component-ko.png)
 
