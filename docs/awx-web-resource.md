@@ -5,7 +5,7 @@
 
 ## 1.2 AWX 웹 접속
 
-- URL: `http://localhost:<assigned-nodeport>`
+- URL: `http://<EXTERNAL-IP>:<PORT>`
 - ID: admin
 - Password: 아래 명령어로 확인
 
@@ -110,16 +110,4 @@ kubectl get po
 ```bash
 NAME              READY   STATUS    RESTARTS   AGE
 nginx-test-pod    1/1     Running   0          10s
-```
-
-### 1.4.3 포트포워딩 설정
-
-```bash
-kubectl port-forward pod/nginx-test-pod 8080:80
-```
-
-### 1.4.4 브라우저에서 확인
-
-```bash
-http://localhost:8080
 ```
